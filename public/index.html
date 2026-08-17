@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IT TOLD ME TO SAY THAT — series pitch</title>
+<meta name="description" content="A street series that looks like real phone footage, is entirely generated, and never admits it — until the episode where it does.">
+<style>
+  :root{
+    --bg:#08090a;
+    --panel:#0e1011;
+    --line:#1e2224;
+    --ink:#e8eaea;
+    --dim:#8e9698;
+    --hud:#7aff8a;
+    --mono:"SF Mono",ui-monospace,Menlo,Consolas,"Liberation Mono",monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:var(--sans); font-size:17px; line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+  a{color:var(--hud)}
+
+  /* ---------- hero ---------- */
+  header{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+  .kicker{
+    font-family:var(--mono); font-size:12px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--hud); margin:0 0 20px;
+  }
+  h1{
+    font-size:clamp(34px,7.4vw,62px); line-height:1.02; letter-spacing:-.03em;
+    margin:0 0 20px; font-weight:680;
+  }
+  .lede{font-size:clamp(18px,2.6vw,21px);color:var(--dim);margin:0;max-width:56ch}
+  .lede b{color:var(--ink);font-weight:600}
+
+  .hero-fig{margin:38px 0 0}
+  .hero-fig img{
+    width:100%;max-width:330px;display:block;border-radius:10px;
+    border:1px solid var(--line);
+  }
+  figcaption{
+    font-family:var(--mono);font-size:12px;color:var(--dim);
+    margin-top:12px;line-height:1.5;
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  h2{
+    font-family:var(--mono); font-size:12px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--hud);
+    margin:0 0 22px; font-weight:600;
+  }
+  h3{font-size:20px;letter-spacing:-.01em;margin:32px 0 10px;font-weight:640}
+  h3:first-of-type{margin-top:0}
+  p{margin:0 0 18px;max-width:66ch}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:640}
+  em{color:var(--hud);font-style:normal;font-weight:600}
+
+  ul{margin:0 0 18px;padding-left:0;list-style:none;max-width:66ch}
+  li{position:relative;padding-left:26px;margin-bottom:13px}
+  li::before{
+    content:"›";position:absolute;left:6px;top:-1px;
+    color:var(--hud);font-family:var(--mono);font-size:16px;
+  }
+
+  /* ---------- script block ---------- */
+  .script{
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:26px 24px;font-family:var(--mono);font-size:13.5px;line-height:1.72;
+    white-space:pre-wrap;overflow-x:auto;color:#c8cdcd;margin:0 0 8px;
+  }
+  .script .hud{color:var(--hud)}
+  .script .sh{color:#6f7779}
+  .script .name{color:#fff}
+
+  /* ---------- phase cards ---------- */
+  .phase{
+    border:1px solid var(--line);border-left:2px solid var(--hud);
+    background:var(--panel);border-radius:0 10px 10px 0;
+    padding:22px 24px;margin:0 0 16px;
+  }
+  .phase .tag{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--hud);display:block;margin-bottom:8px;
+  }
+  .phase p{margin-bottom:0}
+  .phase p + p{margin-top:14px}
+
+  /* ---------- slots ---------- */
+  .slots{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));
+    gap:8px;margin:0;padding:0;list-style:none;max-width:none;
+  }
+  .slots li{
+    padding:11px 13px;margin:0;background:var(--panel);
+    border:1px solid var(--line);border-radius:7px;
+    font-family:var(--mono);font-size:12.5px;color:#b6bcbc;
+  }
+  .slots li::before{content:none}
+
+  /* ---------- stats ---------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:26px}
+  .stat{background:var(--panel);padding:20px 18px}
+  .stat .n{font-family:var(--mono);font-size:26px;color:var(--hud);line-height:1;letter-spacing:-.02em}
+  .stat .l{font-size:13px;color:var(--dim);margin-top:9px;line-height:1.4}
+
+  .pull{
+    font-size:clamp(19px,3vw,23px);line-height:1.42;letter-spacing:-.015em;
+    border-left:2px solid var(--hud);padding-left:20px;margin:0 0 18px;max-width:60ch;
+  }
+
+  footer{padding:44px 0 76px;color:var(--dim);font-size:14px}
+  footer p{max-width:66ch;margin-bottom:12px}
+  .sig{font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:#565e60}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header>
+  <p class="kicker">Series pitch · Cluely beta week · Aug 18–22</p>
+  <h1>It Told Me<br>To Say That</h1>
+  <p class="lede">A street series that looks like ordinary phone footage, is <b>entirely generated</b>, and never admits it — until the episode where it does.</p>
+
+  <figure class="hero-fig">
+    <img src="still.png" alt="POV still through smart glasses: a woman at a New York crosswalk turns toward camera with a guarded half-smile. Green monospace overlay reads: DO NOT EXPLAIN THE GLASSES.">
+    <figcaption>Ep. 1 — “The Crosswalk.” Nothing in this frame exists.</figcaption>
+  </figure>
+</header>
+
+<section>
+  <h2>Premise</h2>
+  <p>Shot entirely POV through smart glasses. You never see the wearer — only the stranger he's talking to, and the overlay feeding him his lines. He obeys it completely. It is always right.</p>
+  <p>Every episode closes on the same two words.</p>
+</section>
+
+<section>
+  <h2>Pilot script — “The Crosswalk”</h2>
+<div class="script"><span class="sh">SHOT 1 (0:00–0:03)</span>
+POV through glasses. Slight fisheye, handheld judder, blown-out
+sun on a sidewalk. A woman ahead at a crosswalk, on her phone.
+Small overlay flickers on, lower-left:
+
+    <span class="hud">&gt; APPROACH. DO NOT COMPLIMENT HER.</span>
+
+<span class="sh">SHOT 2 (0:03–0:07)</span>
+She looks up. He's already mid-sentence.
+<span class="name">HIM:</span> “Sorry — is the 6 running? My phone's dead.”
+
+    <span class="hud">&gt; SHE TOOK ONE AIRPOD OUT. GOOD.</span>
+
+<span class="sh">SHOT 3 (0:07–0:11)</span>
+She answers, half-guarded, says something about the train.
+
+    <span class="hud">&gt; TOTE BAG — BOOKSTORE IN FISHTOWN.
+    &gt; SHE'S NOT A TOURIST.</span>
+
+<span class="name">HIM:</span> “That bag's from Fishtown. You live here.”
+<span class="name">HER:</span> (beat, half-smile) “...okay, that's a little scary.”
+
+<span class="sh">SHOT 4 (0:11–0:15)</span>
+The overlay flickers. Then prints one line, slowly:
+
+    <span class="hud">&gt; SHE LIKES IT. DO NOT EXPLAIN THE GLASSES.</span>
+
+He says nothing. Long pause. She's still looking at him.
+<span class="name">HER:</span> “Are you gonna ask for my number or not?”
+
+<span class="sh">SHOT 5 (0:15–0:18)</span>
+POV tilts down as she types into his phone. Small, lower-left:
+
+    <span class="hud">&gt; YOU'RE WELCOME.</span>
+
+CUT.</div>
+  <p style="font-size:15px;color:var(--dim);margin-top:18px"><strong style="color:var(--ink)">The fixed beat:</strong> <em>&gt; YOU'RE WELCOME.</em> closes every episode. Dry, smug, unearned. That's the handle — once it lands, people start commenting it under any video where someone gets bailed out. The comment is the distribution, not the video.</p>
+</section>
+
+<section>
+  <h2>The campaign — two phases</h2>
+
+  <div class="phase">
+    <span class="tag">Phase 1 · weeks 1–6 · run it straight</span>
+    <p>Post it as a normal creator account. No branding. No watermark. No “made with AI.” Just a guy with smart glasses approaching strangers, and an overlay that's always one step ahead.</p>
+    <p>The audience will argue furiously about whether <strong>the glasses</strong> are real. Nobody will think to ask whether <strong>the street</strong> is.</p>
+  </div>
+
+  <div class="phase">
+    <span class="tag">Phase 2 · the reveal · this is the launch</span>
+    <p>One episode. He approaches someone. The overlay feeds him a line — and the stranger says the overlay's <em>next</em> instruction out loud, before it prints. The street stops moving. Everyone in frame turns to camera.</p>
+    <p>Card: <em>None of these people exist. None of these streets exist. Forty episodes, one tool.</em></p>
+  </div>
+
+  <p>The reveal isn't a feature list. It's a betrayal — and six weeks of accumulated belief is the entire payload. You can't buy that reaction with a demo reel, because a demo reel tells people it's fake in the first frame and forfeits the only thing worth proving.</p>
+</section>
+
+<section>
+  <h2>Why this is the right demo for a video generator</h2>
+
+  <h3>It attacks the hard thing on purpose</h3>
+  <p>Same wearer, same overlay, same fisheye, forty episodes. Character and frame consistency across a series is where every model still falls apart. If the tool holds it, that's a capability claim nobody else can make. If it drifts, you've found the bug that matters most — before launch, not after.</p>
+
+  <h3>Documentary realism is a harder target than cinematic</h3>
+  <p>Cinematic hides flaws in grade, grain and shallow focus. A plain sunny sidewalk at 2pm hides nothing. <strong>Passing as a boring phone video is a bigger flex than passing as a movie</strong> — and it's the one that makes people feel something, because it's the register they trust.</p>
+
+  <h3>POV removes the hardest render in the medium</h3>
+  <p>You never generate the protagonist's face — the thing viewers clock first and models break soonest. One character per frame instead of two. Call it double the usable takes per hour, which is what actually decides whether forty videos exist by Friday.</p>
+
+  <h3>And it still tests lip-sync where it counts</h3>
+  <p>Natural light, no cutaways, a stranger delivering real dialogue straight down the barrel. Nowhere to hide.</p>
+</section>
+
+<section>
+  <h2>Forty slots, one template</h2>
+  <p>The wearer approaches:</p>
+  <ul class="slots">
+    <li>a bouncer at a full club</li>
+    <li>a landlord showing to twelve people</li>
+    <li>a cop mid-ticket</li>
+    <li>his girlfriend's father</li>
+    <li>a car salesman</li>
+    <li>a recruiter at a career fair</li>
+    <li>a gate agent, oversold flight</li>
+    <li>returning something, no receipt</li>
+    <li>an ex, at a wedding</li>
+    <li>a bodega owner at 3am</li>
+    <li>a hostile neighbour</li>
+    <li>his own therapist</li>
+  </ul>
+  <p style="margin-top:20px">Same POV, same overlay, same closing beat. The comedy lives in the machine's cold competence and the human's total obedience — never in the conquest. That's what keeps it funny instead of grim, and it's what lets the series survive past episode eight.</p>
+</section>
+
+<section>
+  <h2>Why it ragebaits itself — twice</h2>
+  <p class="pull">“If every single person in the world saw this, 50% would have a very strong negative reaction. If the number's not 50, you're probably not being ballsy enough.”</p>
+  <p style="font-size:14px;color:var(--dim);margin-top:-6px">— Roy Lee</p>
+  <p><strong>Wave one, during Phase 1:</strong> half the comments call it dystopian and predatory, half ask where to buy the glasses. Nobody watches it neutrally.</p>
+  <p><strong>Wave two, at the reveal:</strong> every person who spent six weeks defending it as real. That's a bigger fight than the first one, and it arrives exactly when there's a product to name.</p>
+</section>
+
+<section>
+  <h2>The production math</h2>
+  <div class="stats">
+    <div class="stat"><div class="n">~200</div><div class="l">videos/day your machine already runs</div></div>
+    <div class="stat"><div class="n">1%</div><div class="l">your own stated hit rate — 100 in, one viral</div></div>
+    <div class="stat"><div class="n">40</div><div class="l">premise slots, written before I land</div></div>
+  </div>
+  <p>Which means the deliverable for five days isn't a hit — it's <strong>a template that survives being run forty times.</strong> A brilliant one-off is worth less to you than a repeatable frame with slots, because the frame is what the machine eats.</p>
+  <p>Generated footage is free for everyone now, so volume isn't a moat and neither is fidelity. The channels getting deleted this year are the ones where the model generated the <em>idea</em> too. AI-executed, human-authored is the only durable version — and the forty premises are the human half.</p>
+</section>
+
+<footer>
+  <p>Written for the Cluely in-person beta week, Aug 18–22 2026. The still above was generated, then hand-lettered — plate and overlay are separate passes, because trusting a model to spell is how you lose a thumbnail.</p>
+  <p class="sig">SUNWOONG HA · sunwoong@deck.co</p>
+</footer>
+
+</div>
+</body>
+</html>
